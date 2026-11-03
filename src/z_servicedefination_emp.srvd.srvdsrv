@@ -1,0 +1,5 @@
+@EndUserText.label: 'SD for emp'
+define service Z_ServiceDefination_emp {
+  expose ZC_EMP_CDS;
+  expose ZC_EMP_PROJ_CDS;
+}

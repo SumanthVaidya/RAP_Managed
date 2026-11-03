@@ -1,0 +1,60 @@
+@Metadata.layer: #CORE
+    @UI.headerInfo: {
+      typeName: 'Employee',
+    typeNamePlural: 'Employees',
+    title: { type: #STANDARD, value: 'Empfirstname' , criticalityRepresentation: #WITHOUT_ICON},
+    description: { type: #STANDARD, value: 'Emplastname' , criticalityRepresentation: #WITHOUT_ICON},
+    typeImageUrl: 'sap-icon://employee'
+    
+                      } 
+annotate entity ZC_EMP_CDS
+    with{ 
+
+ @UI.facet:[{ type: #IDENTIFICATION_REFERENCE,
+            purpose: #STANDARD,
+            label: 'Employee',
+            id: 'Employee',
+            position: 10},
+            { type: #LINEITEM_REFERENCE,
+            purpose: #STANDARD,
+            label: 'Project',
+            id: 'Project',
+            position: 20,
+            targetElement: '_empproj'}]
+    @UI.lineItem: [{ position: 10, type: #FOR_ACTION, dataAction: 'setAdmitted', label: 'Set Admitted' }]
+              
+    @UI.identification: [{ position: 10, label: 'Employee ID', value: 'Empid' }]
+    Empid;
+    @UI.lineItem: [{ position: 20, label: 'First Name', value: 'Empfirstname' }]
+    @UI.identification: [{ position: 20, label: 'First Name', value: 'Empfirstname' }]
+    Empfirstname;
+    @UI.lineItem: [{ position: 30, label: 'Last Name', value: 'Emplastname' }]
+    @UI.identification: [{ position: 30, label: 'Last Name', value: 'Emplastname' }]
+    Emplastname;
+    @UI.lineItem: [{ position: 40, label: 'Date of Birth', value: 'Empdob' }]
+    @UI.identification: [{ position: 40, label: 'Date of Birth', value: 'Empdob' }]
+    Empdob;
+    @UI.lineItem: [{ position: 50, label: 'Gender', value: 'Empgender' }]
+    @UI.identification: [{ position: 50, label: 'Gender', value: 'Empgender' }]
+    Empgender;
+    @UI.lineItem: [{ position: 60, label: 'Email', value: 'Empemail' }]
+    @UI.identification: [{ position: 60, label: 'Email', value: 'Empemail' }]
+    Empemail;
+    @UI.lineItem: [{ position: 70, label: 'Level', value: 'Emplevel' }]
+    @UI.identification: [{ position: 70, label: 'Level', value: 'Emplevel' }]
+    Emplevel;
+    @UI.lineItem: [{ position: 80, label: 'Department', value: 'Empdepartment' }]
+    @UI.identification: [{ position: 80, label: 'Department', value: 'Empdepartment' }]
+    Empdepartment;
+    @UI.lineItem: [{ position: 90, label: 'Designation', value: 'Empdesignation' }]
+    @UI.identification: [{ position: 90, label: 'Designation', value: 'Empdesignation' }]
+    Empdesignation;
+    @UI.lineItem: [{ position: 100, label: 'Joining Date', value: 'Empjoiningdate' }]
+    @UI.identification: [{ position: 100, label: 'Joining Date', value: 'Empjoiningdate' }]
+    Empjoiningdate;
+    @UI.lineItem: [{ position: 110, label: 'Project Allocated', value: 'Empprojectallocated' }]
+    @UI.identification: [{ position: 110, label: 'Project Allocated', value: 'Empprojectallocated' }]
+    Empprojectallocated;
+    /* Associations */
+   // _empproj;
+}
