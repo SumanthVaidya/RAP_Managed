@@ -13,7 +13,9 @@ authorization master ( instance )
   update;
   delete;
   field ( readonly, numbering : managed ) Empid;
+  field ( mandatory ) Empdob;
   association _empproj { create; }
+  validation Empdob on save {create;}
 }
 
 define behavior for ZI_EMP_proj_cds //alias <alias_name>
