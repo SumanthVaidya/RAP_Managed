@@ -6,7 +6,7 @@ implementation in class zbp_i_emp_cds unique
 persistent table zdb_employee
 lock master
 authorization master ( instance )
-//etag master <field_name>
+etag master Lastchangedat
 {
   create ( authorization : global );
   action ( features: instance )setAdmitted;
@@ -23,7 +23,7 @@ define behavior for ZI_EMP_proj_cds //alias <alias_name>
 persistent table zbd_employeeproj
 lock dependent by _emp
 authorization dependent by _emp
-//etag master <field_name>
+etag dependent by _emp
 {
   update;
   delete;

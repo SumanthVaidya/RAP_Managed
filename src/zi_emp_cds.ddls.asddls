@@ -16,5 +16,7 @@ composition [0..*] of ZI_EMP_proj_cds as _empproj
     empdesignation as Empdesignation,
     empjoiningdate as Empjoiningdate,
     empprojectallocated as Empprojectallocated,
+    @Semantics.systemDateTime.localInstanceLastChangedAt: true
+    lastchangedat as Lastchangedat,
     _empproj
 }

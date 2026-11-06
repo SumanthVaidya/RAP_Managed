@@ -15,6 +15,7 @@ define root view entity ZC_EMP_CDS as projection on ZI_Emp_CDS
     Empdesignation,
     Empjoiningdate,
     Empprojectallocated,
+    Lastchangedat,
     /* Associations */
     _empproj : redirected to composition child ZC_EMP_PROJ_CDS
 }
