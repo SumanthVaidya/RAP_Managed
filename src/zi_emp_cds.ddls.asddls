@@ -3,6 +3,7 @@
 @EndUserText.label: 'Employee CDS view'
 @Metadata.ignorePropagatedAnnotations: true
 define root view entity ZI_Emp_CDS as select from zdb_employee
+association to ZI_gender_view as _gender on $projection.Empgender = _gender.value_low
 composition [0..*] of ZI_EMP_proj_cds as _empproj
 {
     key empid as Empid,
@@ -18,5 +19,6 @@ composition [0..*] of ZI_EMP_proj_cds as _empproj
     empprojectallocated as Empprojectallocated,
     @Semantics.systemDateTime.localInstanceLastChangedAt: true
     lastchangedat as Lastchangedat,
-    _empproj
+    _empproj,
+    _gender
 }

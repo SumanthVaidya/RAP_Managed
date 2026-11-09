@@ -17,5 +17,6 @@ define root view entity ZC_EMP_CDS as projection on ZI_Emp_CDS
     Empprojectallocated,
     Lastchangedat,
     /* Associations */
-    _empproj : redirected to composition child ZC_EMP_PROJ_CDS
+    _empproj : redirected to composition child ZC_EMP_PROJ_CDS,
+    _gender.value_low as gender
 }

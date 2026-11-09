@@ -33,9 +33,11 @@ annotate entity ZC_EMP_CDS
     Emplastname;
     @UI.lineItem: [{ position: 40, label: 'Date of Birth', value: 'Empdob' }]
     @UI.identification: [{ position: 40, label: 'Date of Birth', value: 'Empdob' }]
+  
     Empdob;
     @UI.lineItem: [{ position: 50, label: 'Gender', value: 'Empgender' }]
     @UI.identification: [{ position: 50, label: 'Gender', value: 'Empgender' }]
+    @Consumption.valueHelpDefinition: [{ entity: { name: 'ZI_gender_view' , element: 'value_low'} }]
     Empgender;
     @UI.lineItem: [{ position: 60, label: 'Email', value: 'Empemail' }]
     @UI.identification: [{ position: 60, label: 'Email', value: 'Empemail' }]

@@ -3,7 +3,8 @@
 {
 "FROM":
 [
-"ZI_EMP_CDS"
+"ZI_EMP_CDS",
+"ZI_GENDER_VIEW"
 ],
 "ASSOCIATED":
 [
